@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logIn, logOut, countIncrease, countDecrease } from "../../actions";
 import classes from "./home.module.css";
 
-function Home() {
+const Home = () => {
   const count = useSelector((state) => state.countReducer);
   const dispatch = useDispatch();
   const { logFlag } = useSelector((state) => state.logReducer);
@@ -29,6 +29,6 @@ function Home() {
       )}
     </div>
   );
-}
+};
 
 export default Home;
